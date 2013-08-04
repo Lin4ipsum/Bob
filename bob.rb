@@ -5,7 +5,7 @@ class Bob
       'Fine. Be that way!'
     elsif string == string.upcase
       'Woah, chill out!'
-    elsif string.match(/(\?\z)/)
+    elsif string[-1] == '?'
       'Sure.'
     else
       'Whatever.'
