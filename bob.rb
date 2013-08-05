@@ -2,7 +2,7 @@ class Bob
 
   def hey string
     case 
-    when normal_tone?(string)
+    when silence?(string)
       'Fine. Be that way!'  
     when shouting?(string)
       'Woah, chill out!' 
@@ -15,7 +15,7 @@ class Bob
 
   private
 
-  def normal_tone? string
+  def silence? string
     string.to_s.strip.empty?
   end
 
