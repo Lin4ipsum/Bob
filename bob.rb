@@ -1,11 +1,12 @@
 class Bob
 
   def hey string
-    if empty(string)
+    case 
+    when empty(string)
       'Fine. Be that way!'  
-    elsif shouting(string)
+    when shouting(string)
       'Woah, chill out!' 
-    elsif question(string)
+    when question(string)
       'Sure.'  
     else
       'Whatever.'
