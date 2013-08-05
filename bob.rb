@@ -1,10 +1,15 @@
 class Bob
 
   def hey string
-    return 'Fine. Be that way!' if empty(string)
-    return 'Woah, chill out!' if shouting(string)
-    return 'Sure.' if question(string)
-    return 'Whatever.'
+    if empty(string)
+     'Fine. Be that way!'  
+    elsif shouting(string)
+     'Woah, chill out!' 
+    elsif question(string)
+     'Sure.'  
+    else
+     'Whatever.'
+    end
   end
 
   private
