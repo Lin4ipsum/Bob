@@ -1,35 +1,24 @@
 class Bob
 
   def hey string
-    if check_for_nil_and_empty
-    elsif check_for_upcase
-    elsif check_for_ends_in_question_mark
-    else check_for_string
-    end
+    return 'Fine. Be that way!' if check_for_nil_and_empty(string)
+    return 'Woah, chill out!' if check_for_upcase(string)
+    return 'Sure.' if check_for_ends_in_question_mark(string)
+    return 'Whatever.'
   end
 
   private
 
-  def check_for_nil_and_empty
-    if string.nil? or string.strip.empty?
-      'Fine. Be that way!'
-    end
+  def check_for_nil_and_empty string
+    string.to_s.strip.empty?
   end
 
-  def check_for_upcase
-    if string == string.upcase
-      'Woah, chill out!'
-    end
+  def check_for_upcase string
+    string == string.upcase
   end
 
-  def check_for_ends_in_question_mark
-    if string.end_with?('?')
-      'Sure.'
-    end
-  end
-
-  def check_for_string
-    'Whatever.'
+  def check_for_ends_in_question_mark string
+    string.end_with?('?')
   end
 
 end
