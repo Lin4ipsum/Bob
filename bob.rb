@@ -2,11 +2,11 @@ class Bob
 
   def hey string
     case 
-    when empty(string)
+    when normal_tone?(string)
       'Fine. Be that way!'  
-    when shouting(string)
+    when shouting?(string)
       'Woah, chill out!' 
-    when question(string)
+    when question?(string)
       'Sure.'  
     else
       'Whatever.'
@@ -15,15 +15,15 @@ class Bob
 
   private
 
-  def empty string
+  def normal_tone? string
     string.to_s.strip.empty?
   end
 
-  def shouting string
+  def shouting? string
     string == string.upcase
   end
 
-  def question string
+  def question? string
     string.end_with?('?')
   end
 
