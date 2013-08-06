@@ -1,12 +1,12 @@
 class Bob
 
-  def hey string
+  def hey phrase
     case 
-    when silence?(string)
+    when silence?(phrase)
       'Fine. Be that way!'  
-    when shouting?(string)
+    when shouting?(phrase)
       'Woah, chill out!' 
-    when question?(string)
+    when question?(phrase)
       'Sure.'  
     else
       'Whatever.'
@@ -15,16 +15,16 @@ class Bob
 
   private
 
-  def silence? string
-    string.to_s.strip.empty?
+  def silence? phrase
+    phrase.to_s.strip.empty?
   end
 
-  def shouting? string
-    string == string.upcase
+  def shouting? phrase
+    phrase == phrase.upcase
   end
 
-  def question? string
-    string.end_with?('?')
+  def question? phrase
+    phrase.end_with?('?')
   end
 
 end
